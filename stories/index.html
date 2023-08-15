@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to FactFiction.net</title>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/comic-neue" type="text/css"/>
+<link rel="shortcut icon" type="image/jpg" href="https://sparklecarehospital.com/media/assets/factfiction1.png"/>
+<style>
+
+html.filtered {
+  filter: saturate(0.5);
+}
+
+body {
+	background: url('https://sparklecarehospital.com/media/assets/bg.png');
+    backdrop-filter: hue-rotate(120deg);
+    margin: 0%;
+    padding: 0%;
+    font-family: 'ComicNeueBold';
+}
+
+#header {
+  margin: auto;
+  text-align: center;
+  width: 800px;
+}
+#toggle {
+  background-color: #ff00aa;
+  border: 0px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  width: 200px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-family: 'ComicNeueBold';
+  font-size: 16px;
+  filter: hue-rotate(120deg);
+}
+#toggle:hover{
+    background-color:#ff55aa;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f0a;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  filter: hue-rotate(120deg);
+}
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 55px;
+  margin: auto;
+  display: inline-block;
+}
+.home {
+  background-image: url('https://sparklecarehospital.com/media/assets/homenew.png');
+  background-position: 0px;
+  width: 197px;
+  height: 68px;
+}
+.home:hover {
+  background-position: 197px;
+}
+.stories {
+  background-image: url('https://sparklecarehospital.com/media/assets/stories.png');
+  background-position: 0px;
+  width: 197px;
+  height: 68px;
+}
+.stories:hover {
+  background-position: 197px;
+}
+#content-wrapper {
+  margin: auto;
+    margin-top: auto;
+  background: #ffffff;
+  margin-top: 0px;
+  padding: 20px;
+  text-align: center;
+}
+#story-wrapper {
+  width: 100%;
+  margin: auto;
+  display: table-row;
+}
+#story {
+  width: 50%;
+  display: table-cell;
+  color: white;
+  filter: hue-rotate(120deg);
+}
+#story-body {
+  background: #f0a;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 15px;
+}
+#story a {color: white;}
+#tag {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+#tag {
+  font-family: 'ComicNeueBold';
+  font-size: 18px;
+  background: #fff;
+  color: #f0a;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+#footer-wrapper {
+  max-width: 1300px;
+  background: #ff00aa;
+  margin: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  filter: hue-rotate(120deg);
+}
+#footer-wrapper a {color: white;}
+</style>
+</head>
+<body><br>
+<div id="header">
+<h1 style="color: #fff; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">factfiction.net</h1>
+</div>
+<div align="center"><button id="toggle" onclick="toggle();">Saturation Toggler</button></div>
+<div style="margin: 10px;">
+<div class="topnav" id="myTopnav">
+  <a href="/" class="active"><div class="home"></div></a>
+  <a href="/stories/"><div class="stories"></div></a>
+</div>
+<div id="content-wrapper">
+<div id="story-wrapper">
+    
+    <div id="story">
+        <div id="story-body">
+            <h2>Fact or Fiction</h2>
+        <p><button id="tag">Barruni</button>
+        <button id="tag">Silly</button></p>
+            <p>The annual science fair is held, and Barry is determined to use his project to explain Uni’s magic once and for all. Can science and logic manage to explain the mysteries of his unicorn dog friend? It’s not likely…
+</p>
+<p><a href="https://sparklecarehospital.com/stories/fact-or-fiction" onclick="alert('You're leaving factfiction.net and are going to the official Sparklecare website. Press OK to continue.');">Click to read</a></p></div>
+    </div>
+    <div id="story">
+        <div id="story-body">
+            <h2>Goldfish</h2>
+                    <p><button id="tag">Barruni</button>
+        <button id="tag">Silly</button>
+        <button id="tag">NOT CANON</button></p>
+            <p>Barry and Uni don’t know how to spend time together doing things they both enjoy, so they make a compromise- a compromise that leads to something very special for more than just two.</p>
+        <p><a href="https://sparklecarehospital.com/stories/goldfish" onclick="alert('You're leaving factfiction.net and are going to the official Sparklecare website. Press OK to continue.');">Click to read</a></p>
+</div>
+
+
+    </div>
+
+    
+</div>
+</div>
+<script type="text/javascript">
+    var page = document.documentElement;
+            
+    if (!localStorage.getItem("satTog")) {
+        page.classList.remove("filtered");
+    } else { page.classList.add("filtered"); }
+
+    function toggle() { // If toggle is off, turn it on
+        if (!localStorage.getItem("satTog")) {
+            localStorage.setItem("satTog", true);
+            page.classList.add("filtered");
+        } else { // Otherwise, turn it off
+            localStorage.removeItem("satTog");
+            page.classList.remove("filtered");
+        }
+    }
+</script>
+<div id="footer-wrapper">
+        <p>This page is unofficial and is brought to you by <a href="https://d.factfiction.net">Lexio's Disharmony.</a></p>
+    </div></div>
+<br>
+</body>
+</html>
